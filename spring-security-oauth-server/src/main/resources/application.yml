@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: spring-cloud-client-7005
+  config:
+    import: optional:configserver:http://localhost:7002
+server:
+  port: 7005
