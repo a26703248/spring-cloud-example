@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: spring-cloud-client-7001
+  datasource:
+    url: jdbc:mysql://localhost:3306/web2
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: a0909007892
+  config:
+    import: optional:configserver:http://localhost:7002
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+      show-sql: true
+server:
+  port: 7001
+info:
+  company: Keven

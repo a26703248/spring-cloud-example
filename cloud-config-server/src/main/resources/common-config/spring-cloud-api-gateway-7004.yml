@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: producer_get_route
+          uri: https://localhost:7003
+          predicates:
+            - Path=/producer/**

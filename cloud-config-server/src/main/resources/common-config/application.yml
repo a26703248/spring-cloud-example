@@ -1,0 +1,21 @@
+eureka:
+  instance:
+    lease-expiration-duration-in-seconds: 30
+    lease-renewal-interval-in-seconds: 10
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka
+    registry-fetch-interval-seconds: 10
+    healthcheck:
+      enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,*
+  endpoint:
+    health:
+      show-details: always
+  info:
+    env:
+      enabled: true
